@@ -1,38 +1,3 @@
-Objective Evaluation — Code Analysis
-1. Accuracy
-
-Question: What percentage of the model's verifiable technical claims are correct?
-
-Method: Compare each claim against the source code and trusted references. Label each claim as correct, incorrect, or unverifiable.
-
-Metric: Correct claims / Total verifiable claims × 100
-
-2. Completeness
-
-Question: What percentage of the expected analysis elements are correctly covered?
-
-Method: Create a fixed checklist for each blockchain before testing. Count an element only if the output addresses it correctly.
-
-Metric: Correctly covered elements / Total expected elements × 100
-
-3. Latency
-
-Question: How long does the analysis take?
-
-Method: Measure elapsed time from prompt submission to complete response, excluding initial model loading. Run each test at least three times.
-
-Metric: Median completion time in seconds.
-
-4. Context Window Usage
-
-Question: What is the peak context usage during the analysis?
-
-Method: Record peak context tokens and the configured context limit using runtime measurements, where available. Record any truncation.
-
-Metric: Peak context tokens / Configured context limit × 100
-
-
-
 Valutazione oggettiva — Code Analysis
 1. Accuracy (Accuratezza)
 

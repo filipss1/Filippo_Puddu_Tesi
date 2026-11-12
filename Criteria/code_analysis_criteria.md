@@ -15,7 +15,7 @@ $$\text{Accuracy (\%)} = \left( \frac{\text{Affermazioni corrette}}{\text{Afferm
 * **Categorie di Classificazione:**
   * **Corretta:** L'affermazione rispecchia fedelmente la logica del codice o le specifiche tecniche.
   * **Errata:** L'affermazione contiene incomprensioni architetturali o descrizioni errate del comportamento del codice.
-  * **Non verificabile:** L'affermazione non può essere confermata o smentita in modo definitivo tramite il codice sorgente esaminato.
+  * **Parziale:** L'affermazione non descrive in maniera completa il codice analizzato
 
 ---
 
@@ -37,8 +37,8 @@ $$\text{Completeness (\%)} = \left( \frac{\text{Elementi trattati correttamente}
 ### 3. Latency (Latenza)
 
 * **Domanda:** Quanto tempo impiega il modello a completare l'analisi?
-* **Metodo:** Misurare il tempo trascorso dall'invio del prompt fino al completamento della risposta generata, escludendo il tempo di caricamento iniziale del modello in memoria. Ripetere il test almeno **tre volte** per ciascun modello e calcolarne la mediana.
-* **Valore da Registrare:** Mediana dei tempi di risposta, espressa in secondi (s).
+* **Metodo:** Misurare il tempo trascorso dall'invio del prompt fino al completamento della risposta generata, sommando tutti i tempi impiegati per ciascun prompt.
+* **Valore da Registrare:** Somma dei tempi di risposta.
 
 ---
 
@@ -56,5 +56,5 @@ $$\text{Completeness (\%)} = \left( \frac{\text{Elementi trattati correttamente}
 | :--- | :--- | :--- | :--- |
 | **1. Accuracy** | Affidabilità delle descrizioni tecniche | (Affermazioni corrette / Verificabili) $\times 100$ | Percentuale (%) |
 | **2. Completeness** | Copertura dei requisiti di analisi | (Elementi trattati / Elementi attesi) $\times 100$ | Percentuale (%) |
-| **3. Latency** | Efficienza temporale di risposta | Mediana su 3 esecuzioni (escluso warm-up) | Secondi (s) |
+| **3. Latency** | Efficienza temporale di risposta | Somma dei tempi | Secondi (s) |
 | **4. Context Token Usage** | Consumo complessivo di risorse testuali | Somma di token di input e di output | Numero totale di token |
